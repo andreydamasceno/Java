@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class Condicional {
+public class Condicional {
+    public static void main(String[] args) {
+
+        System.out.printf("Olá Mundo!");
+
+    }
 }
