@@ -6,7 +6,7 @@ public class JogoDeAdivinha {
         int numeroAleatorio = new Random().nextInt(10);
 
         for (int tentativas = 0; tentativas < 5; tentativas++) {
-            System.out.println("tente adivinhar o número:");
+            System.out.println("Tente adivinhar o número:");
             int numeroPensado = leitura.nextInt();
             if (numeroPensado == numeroAleatorio){
                 System.out.println("Parabéns, você acertou o número!");
