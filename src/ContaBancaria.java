@@ -3,7 +3,6 @@ public class ContaBancaria {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
         double saldo = 1000;
-        int opcaoDesejada = leitura.nextInt();
 
         System.out.println("""
             *****************************************************
@@ -23,6 +22,8 @@ public class ContaBancaria {
             
             Digite a opção desejada:
             """);
+
+        int opcaoDesejada = leitura.nextInt();
 
         while (opcaoDesejada != 1 && opcaoDesejada != 2 && opcaoDesejada != 3 && opcaoDesejada != 4) {
             System.out.println("Opção inválida! Digite novamente");
@@ -70,7 +71,7 @@ public class ContaBancaria {
                 if (sacarOuTransferir == 1) {
                     System.out.println("Qual o valor do saque?");
                     double valorSaque = leitura.nextDouble();
-                    if (saldo > valorSaque) {
+                    if (saldo >= valorSaque) {
                         saldo -= valorSaque;
                         System.out.println("operação realizada com sucesso! Seu novo saldo é de R$ " + saldo);
                     } else {
@@ -80,7 +81,7 @@ public class ContaBancaria {
                 } else if (sacarOuTransferir == 2) {
                     System.out.println("Qual o valor da transferência?");
                     double valorTransferencia = leitura.nextDouble();
-                    if (saldo > valorTransferencia) {
+                    if (saldo >= valorTransferencia) {
                         saldo -= valorTransferencia;
                         System.out.println("Qual conta de destino?");
                         String contaDeDestino = leitura.next();
