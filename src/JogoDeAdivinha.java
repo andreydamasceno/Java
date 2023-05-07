@@ -15,5 +15,7 @@ public class JogoDeAdivinha {
                 System.out.println("Número errado!");
             }
         }
+
+        System.out.println("Suas chances acabaram!");
     }
 }
