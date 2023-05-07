@@ -73,10 +73,11 @@ public class ContaBancaria {
                     double valorSaque = leitura.nextDouble();
                     if (saldo > valorSaque) {
                         saldo -= valorSaque;
+                        System.out.println("operação realizada com sucesso! Seu novo saldo é de R$ " + saldo);
                     } else {
                         System.out.println("Saldo insuficiente!");
+                        System.out.println("Seu saldo é de R$ " + saldo);
                     }
-                    System.out.println("Seu saldo é de R$ " + saldo);
                 } else if (sacarOuTransferir == 2) {
                     System.out.println("Qual o valor da transferência?");
                     double valorTransferencia = leitura.nextDouble();
