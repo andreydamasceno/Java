@@ -3,13 +3,14 @@ public class ContaBancaria {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
         double saldo = 1000;
+        int opcaoDesejada = leitura.nextInt();
 
         System.out.println("""
             *****************************************************
             Bem Vindo!
             Cliente: Andrey Damasceno
             Conta: Corrente
-            """ + "Saldo: R$ " + saldo);
+            Saldo: R$ """ + saldo);
         System.out.println("""
             *****************************************************
             
@@ -22,8 +23,6 @@ public class ContaBancaria {
             
             Digite a opção desejada:
             """);
-
-        int opcaoDesejada = leitura.nextInt();
 
         while (opcaoDesejada != 1 && opcaoDesejada != 2 && opcaoDesejada != 3 && opcaoDesejada != 4) {
             System.out.println("Opção inválida! Digite novamente");
